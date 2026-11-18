@@ -1901,7 +1901,7 @@ namespace HexiumLauncher
             {
                 if (!File.Exists(ClientExe))
                 {
-                    MessageBox.Show($"Client not found at: {ClientExe}", "Hexium Client - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Client not found at: {ClientExe}", "Kovix Client - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -1915,7 +1915,7 @@ namespace HexiumLauncher
                     WriteLog($"Failed to update AppSettings.xml: {ex.Message}");
                     MessageBox.Show(
                         $"Hexium could not apply its required client settings, so the player was not started.\n\nError: {ex.Message}",
-                        "Hexium Client - Error",
+                        "kovix Client - Error",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error
                     );
