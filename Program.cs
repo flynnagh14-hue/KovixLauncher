@@ -236,8 +236,8 @@ namespace HexiumLauncher
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    $"Hexium Launcher could not finish updating.\n\n{DescribeException(ex)}",
-                    "Hexium Launcher Update",
+                    $"Kovix Launcher could not finish updating.\n\n{DescribeException(ex)}",
+                    "Kovix Launcher Update",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -1049,7 +1049,7 @@ namespace HexiumLauncher
                 }
 
                 Installing = true;
-                status.Text = $"Updating Hexium Launcher to {availableVersion}...";
+                status.Text = $"Updating Kovix Launcher to {availableVersion}...";
                 string updatesDirectory = Path.Combine(clientlocation, "Updates");
                 Directory.CreateDirectory(updatesDirectory);
                 downloadedUpdate = Path.Combine(
@@ -1332,7 +1332,7 @@ namespace HexiumLauncher
                 if (needsClientInstall)
                 {
                     StopLegacyClientProcesses();
-                    this.Text = "Hexium Installer";
+                    this.Text = "Kovix Installer";
                     status.Text = $"Downloading {ClientDisplayName}...";
                     this.Refresh();
                     await DownloadVersion();
@@ -1428,7 +1428,7 @@ namespace HexiumLauncher
             }));
 
             status.Text = "Installation Completed!";
-            MessageBox.Show("Hexium installed! You can now join games from the website.",
+            MessageBox.Show("Kovix installed! You can now join games from the website.",
                           "Hexium Client",
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Information);
@@ -1436,7 +1436,7 @@ namespace HexiumLauncher
 
         private void ShowInstalledMessage()
         {
-            var result = MessageBox.Show("Would you like to uninstall Hexium?",
+            var result = MessageBox.Show("Would you like to uninstall Kovix?",
                                        "Hexium Client",
                                        MessageBoxButtons.YesNo,
                                        MessageBoxIcon.Question);
@@ -1540,7 +1540,7 @@ namespace HexiumLauncher
                             if (Array.Exists(installRoots, root => IsPathUnder(executablePath, root)))
                             {
                                 throw new IOException(
-                                    $"Hexium could not close the previous {processName} process. " +
+                                    $"Kovix could not close the previous {processName} process. " +
                                     "Close every Hexium/Roblox game window and try again."
                                 );
                             }
@@ -1599,7 +1599,7 @@ namespace HexiumLauncher
                 {
                     progress.Style = ProgressBarStyle.Marquee;
                     progress.MarqueeAnimationSpeed = 30;
-                    status.Text = "Uninstalling Hexium...";
+                    status.Text = "Uninstalling Kovix...";
                     cancelBtn.Enabled = false;
                 }));
 
@@ -1615,7 +1615,7 @@ namespace HexiumLauncher
 
                 CleanFilesAndRegistry();
 
-                MessageBox.Show("Hexium has been uninstalled successfully.",
+                MessageBox.Show("Kovix has been uninstalled successfully.",
                              "Hexium Client",
                              MessageBoxButtons.OK,
                              MessageBoxIcon.Information);
@@ -1623,7 +1623,7 @@ namespace HexiumLauncher
             catch (Exception ex)
             {
                 MessageBox.Show($"Failed to uninstall: {ex.Message}",
-                              "Hexium Client - Error",
+                              "Kovix Client - Error",
                               MessageBoxButtons.OK,
                               MessageBoxIcon.Error);
             }
@@ -1677,7 +1677,7 @@ namespace HexiumLauncher
             }
             catch (Exception ex)
             {
-                throw new InvalidOperationException($"Failed to register the Hexium protocol: {ex.Message}", ex);
+                throw new InvalidOperationException($"Failed to register the Kovix launch protocol: {ex.Message}", ex);
             }
         }
 
@@ -1828,7 +1828,7 @@ namespace HexiumLauncher
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Extraction failed: {ex.Message}", "Hexium Client - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Extraction failed: {ex.Message}", "Kovix Client - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw;
                 }
 
@@ -2044,7 +2044,7 @@ namespace HexiumLauncher
             catch (Exception ex)
             {
                 WriteLog($"Launch exception: {ex.Message}");
-                MessageBox.Show($"Failed to launch Hexium at: {ClientExe}\n\nError: {ex.Message}", "Hexium Client - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Failed to launch Kovix at: {ClientExe}\n\nError: {ex.Message}", "Hexium Client - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
         }
