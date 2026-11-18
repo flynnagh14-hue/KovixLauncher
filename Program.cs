@@ -1232,7 +1232,7 @@ namespace HexiumLauncher
 
         private void Init()
         {
-            this.Text = "Hexium Launcher";
+            this.Text = "Kovix Launcher";
             this.ClientSize = new System.Drawing.Size(400, 210);
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -1278,7 +1278,7 @@ namespace HexiumLauncher
                 Height = 25,
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                 Font = new System.Drawing.Font("Segoe UI", 9f),
-                Text = FirstRun ? "Installing Hexium..." : "Launching Hexium..."
+                Text = FirstRun ? "Installing Kovix..." : "Launching Kovix..."
             };
             this.Controls.Add(status);
 
