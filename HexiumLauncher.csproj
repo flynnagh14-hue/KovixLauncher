@@ -10,12 +10,12 @@
     <ApplicationIcon>hexium.ico</ApplicationIcon>
     <AssemblyName>HexiumLauncher</AssemblyName>
     <RootNamespace>HexiumLauncher</RootNamespace>
-    <AssemblyTitle>Hexium Launcher</AssemblyTitle>
-    <Product>Hexium Launcher</Product>
-    <Company>Hexium</Company>
-    <Authors>Hexium</Authors>
-    <Copyright>Copyright © Hexium 2026</Copyright>
-    <Description>Installer and protocol launcher for the Hexium 2016, 2018, 2020 and 2021 clients.</Description>
+    <AssemblyTitle>Kovix Launcher</AssemblyTitle>
+    <Product>Kovix</Product>
+    <Company>Kovix</Company>
+    <Authors>Kovix Team</Authors>
+    <Copyright>Copyright © Kovix</Copyright>
+    <Description>Launcher for the Kovix 2020 revival.</Description>
     <Version>2.1.70</Version>
     <AssemblyVersion>2.1.70.0</AssemblyVersion>
     <FileVersion>2.1.70.0</FileVersion>
