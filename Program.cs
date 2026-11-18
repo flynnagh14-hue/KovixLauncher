@@ -1429,7 +1429,7 @@ namespace HexiumLauncher
 
             status.Text = "Installation Completed!";
             MessageBox.Show("Kovix installed! You can now join games from the website.",
-                          "Hexium Client",
+                          "Kovix Client",
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Information);
         }
@@ -1541,7 +1541,7 @@ namespace HexiumLauncher
                             {
                                 throw new IOException(
                                     $"Kovix could not close the previous {processName} process. " +
-                                    "Close every Hexium/Roblox game window and try again."
+                                    "Close every Kovix/Roblox game window and try again."
                                 );
                             }
 
@@ -1549,7 +1549,7 @@ namespace HexiumLauncher
                             {
                                 throw new IOException(
                                     "Another Roblox game is open and could overwrite the menu policy cache. " +
-                                    "Close the other Roblox game and try Hexium again."
+                                    "Close the other Roblox game and try Kovix again."
                                 );
                             }
                         }
@@ -1956,7 +1956,7 @@ namespace HexiumLauncher
 
                 this.Invoke((MethodInvoker)(() =>
                 {
-                    status.Text = "Starting Hexium...";
+                    status.Text = "Starting Kovix...";
                 }));
                 this.Refresh();
 
@@ -2044,7 +2044,7 @@ namespace HexiumLauncher
             catch (Exception ex)
             {
                 WriteLog($"Launch exception: {ex.Message}");
-                MessageBox.Show($"Failed to launch Kovix at: {ClientExe}\n\nError: {ex.Message}", "Hexium Client - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Failed to launch Kovix at: {ClientExe}\n\nError: {ex.Message}", "Kovix Client - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
         }
